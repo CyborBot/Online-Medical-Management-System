@@ -1,0 +1,46 @@
+<% layout('layouts/boilerplate')%>
+    <link rel="stylesheet" href="/stylesheets/stars.css">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div id="medicalCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <img src="<%= employee.empimage%>" class="d-block w-100" alt="">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ">
+                    <h5 class="card-title ">
+                        <%= employee.empname%>
+                    </h5>
+                    <p class="card-text ">
+                        <%= employee.empdescription%>
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush ">
+                    <li class="list-group-item text-muted ">Employee Code:
+                        <%= employee.empcode%>
+                    </li>
+                    <li class="list-group-item ">Employee Address:
+                        <%=employee.empaddress%>
+                    </li>
+                    <li class="list-group-item ">Employee Salary $
+                        <%= employee.empprice%>
+                    </li>
+                    <li class="list-group-item ">Employee Phone Number
+                        <%= employee.empphone%>
+                    </li>
+
+                </ul>
+                <div class="card-body ">
+                    <a class="card-link btn btn-info " href="/medics/employee/<%=employee._id%>/edit">Edit</a>
+                    <form class="d-inline" action="/medics/employee/<%=employee._id%>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
+            </div>
+
+        </div>
+    </div>

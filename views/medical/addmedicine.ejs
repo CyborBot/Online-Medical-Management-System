@@ -1,0 +1,66 @@
+<% layout('layouts/boilerplate')%>
+    <div class="row">
+        <h1 class="text-center">Enter New Medicine Details</h1>
+        <div class="col-6 offset-3">
+            <form action="/medics/medicine" method="POST" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Enter Medicine Name</label>
+                    <input class="form-control" type="text" id="title" name="medicine[medname]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="medcode">Enter Medicine Code</label>
+                    <input class="form-control" type="number" id="medcode" name="medicine[medcode]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="price">Enter Medicine Price</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="price-label">$</span>
+                        <input type="number" class="form-control" id="price" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="medicine[medprice]" required>
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="dealer">Enter Medicine Dealer Name</label>
+                    <input class="form-control" type="text" id="dealer" name="medicine[meddealer]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="stock">Enter Stock</label>
+                    <input class="form-control" type="number" id="stock" placeholder="0.00" name="medicine[medstock]" required>
+                    <div class="valid-feedback ">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Enter Your Medicine image url</label>
+                    <input class="form-control" type="text" id="image" name="medicine[medimage]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3 ">
+                    <label class="form-label " for="description">Enter Medicine Description</label>
+                    <textarea class="form-control " type="text " id="description " name="medicine[meddescription]" required></textarea>
+                    <div class="valid-feedback ">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3 ">
+                    <button class="btn btn-success ">Add Medicine</button>
+                </div>
+            </form>
+
+        </div>
+    </div>

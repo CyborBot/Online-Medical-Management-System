@@ -1,0 +1,27 @@
+<%layout('layouts/boilerplate')%>
+    <div class="container">
+        <h1>Customer Details</h1>
+        <% for (let cst of customer){%>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-fluid" alt="" src="<%=cst.cstimage%>">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= cst.cstname %>
+                            </h5>
+                            <p class="card-text">
+                                <%= cst.cstbuy %>
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted"><%= cst.cstprice%></small>
+                            </p>
+                            <a class="btn btn-primary" href="/medics/customer/<%= cst._id %>">View <%=cst.cstname%></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }%>
+    </div>

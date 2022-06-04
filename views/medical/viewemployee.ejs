@@ -1,0 +1,27 @@
+<%layout('layouts/boilerplate')%>
+    <div class="container">
+        <h1>Employee Working</h1>
+        <% for (let emp of employee){%>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-fluid" alt="" src="<%=emp.empimage%>">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= emp.empname %>
+                            </h5>
+                            <p class="card-text">
+                                <%= emp.empdescription %>
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted"><%= emp.empphone%></small>
+                            </p>
+                            <a class="btn btn-primary" href="/medics/employee/<%= emp._id %>">View <%=emp.empname%></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }%>
+    </div>

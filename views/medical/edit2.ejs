@@ -1,0 +1,66 @@
+<% layout('layouts/boilerplate')%>
+    <div class="row">
+        <h1 class="text-center">Edit Medicine Details</h1>
+        <div class="col-md-6 offset-md-3">
+            <form action="/medics/medicine/<%=medicine._id%>?_method=PUT" method="POST" novalidate class="validatedform ">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Medicine Name</label>
+                    <input class="form-control" type="text" id="title" name="medicine[medname]" value="<%=medicine.medname %>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Medicine Dealer Name</label>
+                    <input class="form-control" type="text" id="location" name="medicine[meddealer]" value="<%=medicine.meddealer %>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="price">Medicine Price</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="price-label">$</span>
+                        <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="medicine[medprice]" value="<%=medicine.medprice %>" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Medicine Code</label>
+                    <input class="form-control" type="text" id="location" name="medicine[medcode]" value="<%=medicine.medcode %>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="price">Stock Available</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="price" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="medicine[medstock]" value="<%=medicine.medstock%>" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Enter Your Medicine image url</label>
+                    <input class="form-control" type="text" id="image" name="medicine[medimage]" value="<%=medicine.medimage %>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="description">Medicine Description</label>
+                    <textarea class="form-control" type="text" id="description" name="medicine[meddescription]" required><%= medicine.meddescription%></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-info">Update Dealer Details</button>
+                </div>
+            </form>
+            <a href="/medics/<%= medicine._id%>">Back To Campground</a>
+        </div>
+    </div>

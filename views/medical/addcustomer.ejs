@@ -1,0 +1,67 @@
+<% layout('layouts/boilerplate')%>
+    <div class="row">
+        <h1 class="text-center">Enter New Customer Details</h1>
+        <div class="col-6 offset-3">
+            <form action="/medics/customer" method="POST" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Enter Customer Name</label>
+                    <input class="form-control" type="text" id="title" name="customer[cstname]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="cstcode">Enter Customer Code</label>
+                    <input class="form-control" type="number" id="cstcode" name="customer[cstcode]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="cstbuy">Enter Medicine Buy</label>
+                    <input class="form-control" type="text" id="cstbuy" name="customer[cstbuy]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="price">Enter Total Price</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="price-label">$</span>
+                        <input type="number" class="form-control" id="price" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="customer[cstprice]" required>
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="phone">Enter Customer Phone Number</label>
+                    <input class="form-control" type="number" id="phone" name="customer[cstphone]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="address">Enter Customer Address</label>
+                    <input class="form-control" type="text" id="address" name="customer[cstaddress]" required>
+                    <div class="valid-feedback ">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Enter Customer Image Url</label>
+                    <input class="form-control" type="text" id="image" name="customer[cstimage]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="mb-3 ">
+                    <button class="btn btn-success ">Add Employee</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
